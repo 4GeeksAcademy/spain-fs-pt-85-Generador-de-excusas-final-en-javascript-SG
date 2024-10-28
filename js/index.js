@@ -1,15 +1,14 @@
-let pronoun = ["the", "our"];
-let adj = ["great", "big"];
-let noun = ["jogger", "racoon"];
+window.onload = function(){
 
-for (let i = 0; i < pronoun.length; i++) {
-    for (let a = 0; a < adj.length; a++) {
-       for (let b = 0; b < noun.length; b++) {
-        console.log(pronoun[i] + adj[a] + noun[b] + ".com");
-        
-        
-       }
-        
-    }
-    
-}
+let who = ["The dog", "My grandma", "The maiman", "My bird"];
+let action = ["ate", "peed", "crushed", "broke"];
+let what = ["my homework", "my phone", "the car"];
+let when = ["before the class", "when i was sleeping", "while i was excercising", "during my launch", "while i was praying"];
+
+let randomWho = [Math.floor(Math.random()* who.length)];
+let randomAction = [Math.floor(Math.random()* action.length)];
+let randomWhat = [Math.floor(Math.random()* what.length)];
+let randomWhen = [Math.floor(Math.random()* when.length)];
+
+document.querySelector("#excuse").innerHTML = who[randomWho] + " " + action[randomAction] + " " + what[randomWhat] + " " + when[randomWhen]
+};
